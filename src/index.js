@@ -6,8 +6,9 @@ import reportWebVitals from "./reportWebVitals";
 import "../node_modules/cesium/Build/Cesium/Widgets/widgets.css";
 import { BrowserRouter } from "react-router-dom";
 import { Ion } from "cesium";
+import { cesiumIonToken } from "./config";
 
-Ion.defaultAccessToken = process.env.REACT_APP_CESIUM_ION_KEY;
+Ion.defaultAccessToken = cesiumIonToken;
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>

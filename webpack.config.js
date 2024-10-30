@@ -6,8 +6,8 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const assetSources = "./src";
-require("dotenv").config({ path: "./.env" });
+const assetSources= "./src"
+
 module.exports = {
   context: __dirname,
   entry: {
@@ -59,7 +59,7 @@ module.exports = {
       {
         test: /\.(png|gif|jpg|jpeg|svg|xml|gltf|kml)$/,
         use: "url-loader?name=./Assets/Images/[name].[ext]",
-      },
+      }
     ],
   },
   plugins: [
@@ -83,9 +83,6 @@ module.exports = {
     new webpack.DefinePlugin({
       // Define relative base path in cesium for loading assets
       CESIUM_BASE_URL: JSON.stringify("./"),
-    }),
-    new webpack.DefinePlugin({
-      "process.env": JSON.stringify(process.env),
     }),
   ],
   mode: "development",

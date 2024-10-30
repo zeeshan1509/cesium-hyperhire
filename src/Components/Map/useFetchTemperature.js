@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { openWeatherAPI } from "../../config";
 
 const useFetchTemperature = () => {
   const [temperature, setTemperature] = useState(null);
@@ -10,7 +11,7 @@ const useFetchTemperature = () => {
       setTemperature(temperatureCache.current[cacheKey]);
       return;
     }
-    const apiKey = process.env.REACT_APP_OPENWEATHER_API_KEY;
+    const apiKey = openWeatherAPI;
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     try {
       const response = await fetch(url);

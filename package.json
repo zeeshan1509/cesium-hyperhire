@@ -39,7 +39,7 @@
     "start": "webpack serve --config webpack.config.js --open",
     "dev": "webpack serve --config webpack.config.js --open",
     "release": "webpack --config webpack.release.config.js",
-    "build": "react-scripts build",
+    "build": "webpack --config webpack.release.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

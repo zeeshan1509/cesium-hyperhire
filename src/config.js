@@ -1,0 +1,3 @@
+export const cesiumIonToken =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI3MzY2N2M2Yy00NDczLTQ1YmItYmJkOS1iMWMxMTAwYTQ4YjgiLCJpZCI6NjA2MiwiaWF0IjoxNjQzNzEyMjY1fQ.0cV0HEAt-9wQOXt8nOXNmVvDglqXRiPiOfoKpn2XYEk";
+export const openWeatherAPI = "09020183d5fa5a5ee0d636ee61eca633";

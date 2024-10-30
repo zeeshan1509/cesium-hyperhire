@@ -12,13 +12,20 @@ module.exports = [
       app: "./src/index.js",
     },
     output: {
-      path: path.resolve(__dirname, "Release-v1"),
+      path: path.resolve(__dirname, "build"),
       filename: "[name].bundle.js",
 
       // Needed to compile multiline strings in Cesium
       sourcePrefix: "",
     },
-
+    // node: {
+    //   // Resolve node module use of fs
+    //   fs: "empty",
+    //   Buffer: false,
+    //   http: "empty",
+    //   https: "empty",
+    //   zlib: "empty",
+    // },
     resolve: {
       fallback: {
         url: require.resolve("url"),
@@ -56,7 +63,12 @@ module.exports = [
           exclude: /node_modules/,
           use: "url-loader?name=./Assets/Images/[name].[ext]",
         },
-
+        // {
+        //   test: /\.(png|gif|jpg|jpeg|svg|xml|json|b3dm)$/,
+        //   exclude: /node_modules/,
+        //   use: 'file-loader?name=./Assets/Images/[name].[ext]'
+        //   // use: ["file-loader"],
+        // },
         {
           // Remove pragmas
           test: /\.js$/,
